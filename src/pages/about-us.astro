@@ -1,0 +1,100 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import PageMeta from "../components/PageMeta.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<PageLayout>
+  <PageMeta title={`About Us | ${SITE_TITLE}`} slot="meta" />
+  <section class="flex flex-col gap-3" slot="main">
+    <div>
+      <h2 class="font-bold text-lg">Our Mission and Purpose</h2>
+      <p class="py-2">
+        The BLM's mission, which is principally defined by the Federal Land
+        Policy and Management Act of 1976 (FLPMA for short), directs the agency
+        to carry out a dual mandate: that of managing public land for multiple
+        uses while conserving natural, historical, and cultural resources.
+      </p>
+      <p class="py-2">
+        The BLM’s mission has always included sustainable management of the
+        public lands. The BLM WO is implementing an EMS to strengthen its
+        existing commitment to the protection and reclamation of the public
+        lands, pollution prevention, and lessening the environmental impact of
+        its operations. The EMS will become an integral part of the BLM’s
+        day-to-day operations and be incorporated into the long-term planning
+        process across all programs to allow for continual environmental
+        improvement.
+      </p>
+      <p class="py-2">
+        The BLM is committed to managing facilities and performing operations in
+        such a manner as to protect the environment, employees, and public
+        health.
+      </p>
+    </div>
+    <div>
+      <h2 class="font-bold text-lg">What we do.</h2>
+      <p class="py-2">
+        Congress tasked the BLM with a mandate of managing public lands for a
+        variety of uses such as energy development, livestock grazing,
+        recreation, and timber harvesting while ensuring natural, cultural, and
+        historic resources are maintained for present and future use.
+      </p>
+    </div>
+    <div>
+      <h2 class="font-bold text-lg">Our Land Use.</h2>
+      <ul>
+        <li>
+          BLM manages public land through land use plans which are also known as
+          RMPs.
+        </li>
+        <li>
+          BLM also takes into account public views through those living on or
+          near lands.
+        </li>
+        <li>Manages 245 million acres of public land 700 million acres</li>
+        <li>
+          Administers almost 18000 leases and permits for livestock grazing,
+          around 155 million acres, and they cover a 10 year period
+        </li>
+        <li>National Environmental Policy Act or NEPA</li>
+        <li>Federal Land Policy Management Act or FLPMA</li>
+        <li>Science</li>
+        <li>Landscape Approach</li>
+        <li>Geospatial Products</li>
+        <li>Socioeconomic Data</li>
+        <li>Collaboration and Cooperation</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="font-bold text-lg">What our sustainable practices are.</h2>
+      <ul>
+        <li>Conserve U.S. natural and cultural resources.</li>
+        <li>Invest in renewable energy.</li>
+        <li>Restore ecosystems impacted by energy and water development.</li>
+        <li>Conserve energy and water.</li>
+        <li>Understand and manage climate change impacts.</li>
+        <li>
+          Promote and implement sustainable practices including green
+          acquisition, electronic stewardship, and sustainable building
+          construction, operations, and leasing.
+        </li>
+        <li>
+          Comply with applicable Federal, state, local, tribal laws,
+          regulations, and policies.
+        </li>
+        <li>
+          Manage processes, systems, and technology to improve efficiency and
+          productivity.
+        </li>
+        <li>
+          Measure and report performance and identify opportunities for
+          continual improvement.
+        </li>
+        <li>
+          Document and communicate the EMS policy to all employees and the
+          Public.
+        </li>
+      </ul>
+    </div>
+  </section>
+</PageLayout>
