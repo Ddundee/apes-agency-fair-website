@@ -3,6 +3,61 @@ import PageLayout from "../layouts/PageLayout.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 
+const availablePositions = [
+    {
+      position: "Senior IT Specialist",
+      description: "Some IT specialists are computer programmers, system analysts, network specialists, and communication specialists, while others maintain telephone systems, set up employee computers and troubleshoot problems.",
+      requirements: [
+        "Must have a degree in Computer Science",
+        "Must have atleast 3 years of experience"
+      ]
+    }, 
+    {
+      position: "IT Specialist",
+      description: "Some IT specialists are computer programmers, system analysts, network specialists, and communication specialists, while others maintain telephone systems, set up employee computers and troubleshoot problems.",
+      requirements: [
+        "Must have a degree in Computer Science",
+      ]
+    }, 
+    {
+      position: "Mining Engineer",
+      description: "Mining engineers work closely with mine operators to ensure mining and coal development takes place in an environmentally responsible manner.",
+      requirements: [
+        "College degree in Engineering",
+        "Must have atleast 2 years of experience"
+      ]
+    }, 
+    {
+      position: "Petroleum Engineer",
+      description: "Petroleum engineers review permits for all operations through the life of an oil or gas well on federal lands, including on-site inspections. They also review engineering designs to plug abandoned wells along the North Slope of Alaska as a part of the Alaska Legacy Well Program. A a petroleum engineer you'll help the BLM manage the Federal government’s onshore subsurface mineral estate – about 700 million acres (30% of the United States) held by the BLM, U.S. Forest Service and other Federal agencies and surface owners — for the benefit of the American public.",
+      requirements: ["College degree in Petroleum or Chemical Engineering", "Must have atleast 2 years of experience"]
+    }, 
+    {
+      position: "Botanist",
+      description: "Bontanists study how activities on public lands affect all plants. They search for new populations of rare plants and sometimes discover plants that have never been documented. They are always on the look out for undesirable and harmful plants that need to be removed.",
+      requirements: [
+        "Must have a degree in Botany",
+        "Must have atleast 2 years of experience"]
+    }, 
+    {
+      position: "Junior Botanist",
+      description: "Junior Botanist help study how activities on public lands affect all plants. They search for new populations of rare plants and sometimes discover plants that have never been documented. They are always on the look out for undesirable and harmful plants that need to be removed.",
+      requirements: [
+        "Must have a degree in Botany",
+        "Must have atleast 1 year of experience"
+      ]
+
+    }, 
+    {
+      position: "Management",
+      description: "",
+    }, 
+    {
+      position: "Budget Analyst",
+      description: "Budget analysts review overall budgets to ensure the money is spent in line with allocations, policies, procedures, and laws. They are the BLM financial advisors who work to keep us on track and out of the red!",
+      requirements: ["*College degree in helpful"]
+    }
+  ]
 ---
 
 <PageLayout>
@@ -11,11 +66,31 @@ import { SITE_TITLE } from "../config";
     <div>
       <h2 class="font-bold text-lg">Job Descriptions</h2>
       <ul>
-        <li>
-          <div>
-            
-          </div>
-        </li>
+        {
+          availablePositions.map(job => {
+            return (
+              <li class="py-2">
+                <div>
+                  <strong>{job.position}</strong>: {job.description}
+                  {
+                    job.requirements && (
+                    <h3 class="font-bold text-md">Requirement:</h3>
+                      <ul>
+                        {
+                          job.requirements.map(requirement => {
+                            return (
+                              <li>{requirement}</li>
+                            )
+                          })
+                        }
+                      </ul>
+                    )
+                  }
+                </div>
+              </li>
+            )
+          })
+        }
       </ul>
     </div>
   </section>
